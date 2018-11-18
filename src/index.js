@@ -10,11 +10,10 @@ import {
 
 function reducer(state, action) {
 
-  if (action.type === 'changeState')
-  {
+  if (action.type === 'changeState') {
     return action.payload.newState;
   }
-    console.log(action);
+  console.log(action);
   return 'State';
 }
 
@@ -27,12 +26,8 @@ const action = {
   }
 }
 
-
 store.dispatch(action);
 console.log(store.getState());
-
-
-
 
 
 
