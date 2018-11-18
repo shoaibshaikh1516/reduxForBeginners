@@ -10,10 +10,10 @@ function productsReducer(state = [], action) {
   return state;
 }
 
-function userReducer(state = "", action) {
-  switch (action.type) {
+function userReducer(state = "", {type,payload}) {
+  switch (type) {
     case "updateUser":
-      return action.payload;
+      return payload;
   }
   return state;
 }
