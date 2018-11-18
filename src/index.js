@@ -7,17 +7,10 @@ import { Provider } from "react-redux";
 
 import { combineReducers, createStore } from "redux";
 
-function productsReducer(state = [], action) {
-  return state;
-}
+import productsReducer from "./reducers/products-reducers"
+import userReducer from "./reducers/user-reducers"
 
-function userReducer(state = "", { type, payload }) {
-  switch (type) {
-    case "updateUser":
-      return payload;
-  }
-  return state;
-}
+
 
 const allReducers = combineReducers({
   products: productsReducer,
